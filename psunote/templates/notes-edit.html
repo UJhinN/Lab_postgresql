@@ -1,16 +1,15 @@
 {% extends 'base.html' %}
-{% block title %}Create Note{% endblock %}
+{% block title %}Edit Note{% endblock %}
 {% block body %}
 <ul class="nav justify-content-center mb-4">
   <li class="nav-item">
     <a class="btn btn-outline-primary" href="{{ url_for('index') }}">Home</a>
   </li>
   <li class="nav-item">
-    <div class="btn disabled">Create</div>
+    <div class="btn disabled">Edit</div>
   </li>
 </ul>
 
-<h3>Create New Note</h3>
 <form action="" method="POST">
   {{ form.hidden_tag() }}
   <div class="mb-3">
@@ -25,6 +24,6 @@
     {{ form.tags.label(class="form-label") }}
     {{ form.tags(class="form-control") }}
   </div>
-  <button type="submit" class="btn btn-success">Create</button>
+  <button type="submit" class="btn btn-primary">Update</button>
 </form>
 {% endblock %}
